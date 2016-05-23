@@ -13,7 +13,21 @@ public class Animal {
     int edad;
     
     
-    public Animal(){
-        nombre="leon";
+   // public Animal(){
+   //     nombre="leon";
+   // }
+    
+    //CONSTRUCTOR 1
+    public Animal() {   
+    nombre = " ";
+    edad = 0;     
     }
+    
+    //CONSTRUCTOR2
+    public Animal(String nuevoAnimal) {   
+    nombre = nuevoAnimal;
+    edad = 0;     
+    }
+
+  
 }
