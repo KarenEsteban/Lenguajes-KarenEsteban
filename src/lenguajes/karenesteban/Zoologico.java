@@ -6,11 +6,17 @@
 package lenguajes.karenesteban;
 
 public class Zoologico {
-    public static void main(String...algo) {
+    public static void main(String[] algo) {
         System.out.println("Vamos a crear un animal");
         int x=5;
         Animal objeto1=new Animal();
-        System.out.println(objeto1.nombre);
+        
+        System.out.println(objeto1.nombre); 
+        System.out.println(objeto1.edad);
+        
+        Animal objeto2=new Animal("Leon");
+        System.out.println(objeto2.nombre); 
+        System.out.println(objeto2.edad);
         
     }
     
