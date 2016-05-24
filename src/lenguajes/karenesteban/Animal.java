@@ -18,6 +18,7 @@ public class Animal {
    // }
     
     //CONSTRUCTOR 1
+    //Constructor por defecto
     public Animal() {   
     nombre = " ";
     edad = 0;     
