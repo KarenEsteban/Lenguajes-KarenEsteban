@@ -19,7 +19,6 @@ public class LenguajesKarenEsteban {
         System.out.println("Mi primer programita de lenguajes");
         System.out.println("Esta es otra linea");
         
-        //Hoy vamos
     }
     
 }
