@@ -5,10 +5,6 @@
  */
 package constructores;
 
-/**
- *
- * @author T-107
- */
 public class Animal {
     String nombre;
     String especie;
@@ -27,7 +23,15 @@ public class Animal {
          especie=valor1;
          nombre=valor2;
      }
-    //Constructor 2
-     
+    //Constructor 2 
+    public Animal(boolean valor1, String valor2){
+        carnivoro=valor1;
+        nombre=valor2;
+    }
     //Constructor 3
+    public Animal(String valor1, String valor2, boolean valor3){
+        nombre=valor1;
+        especie=valor2;
+        carnivoro=valor3;
+    }
 }
