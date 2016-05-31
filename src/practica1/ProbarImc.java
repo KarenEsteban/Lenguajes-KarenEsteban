@@ -13,10 +13,10 @@ public class ProbarImc {
     public static void main(String[] args) {
         Imc i=new Imc();
         i.setAltura(1.54);
-        i.setPeso(44);
+        i.setPeso(23);
         
     OperacionesImc ope=new OperacionesImc();
-       System.out.println("Tu IMC es: "+ope.calcularImc(i));       
+    System.out.println(ope.calcularImc(i)); 
     }
    
 }

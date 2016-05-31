@@ -11,10 +11,16 @@ package practica1;
  */
 public class OperacionesImc {
     public String calcularImc(Imc i){
-        String msj;
-        double imcPromedio = i.getPeso()/(i.getAltura()*i.getAltura());
-       
-        return ""+imcPromedio; 
-    }
     
+        double imcPromedio = i.getPeso()/(i.getAltura()*i.getAltura()); 
+        if (imcPromedio < 18 ){ 
+        return "Estado: Peso bajo  IMC: "+imcPromedio;
+        } else if (imcPromedio >= 18 && imcPromedio <25) { 
+        return "Estado: Peso normal  IMC: "+imcPromedio;
+        } else if (imcPromedio >=25 && imcPromedio <27) {
+        return "Estado: Ligero sobrepeso  IMC:"+imcPromedio;
+        } else {
+        return "Estado: Obesidad  IMC: "+imcPromedio;
+        }
+    }
 }
