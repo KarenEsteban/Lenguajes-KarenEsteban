@@ -10,7 +10,9 @@ public class ProbarUsuario {
         //Creamos un objeto con el constructor de defecto de la clase usuario
         Usuario u1=new Usuario();
         u1.setEdad(19);
-        System.out.println("Tu edad es "+u1.getEdad());
+        //Creamos un obejto de la clase logica
+        OperacionesUsuario o =new OperacionesUsuario();
+        System.out.println("Tu edad esn dias es "+o.calcularEdadEnDias(u1));
     }
  
 }
