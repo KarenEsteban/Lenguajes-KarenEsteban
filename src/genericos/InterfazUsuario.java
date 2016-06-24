@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -61,15 +62,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
 
         tablaUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Nombre", "Edad", "Email"
@@ -208,17 +201,22 @@ public class InterfazUsuario extends javax.swing.JFrame {
             //Primero generamos un objeto de la clase persistencia usuario
             PersistenciaUsuario p=new PersistenciaUsuario();
             ArrayList<Usuario> usuarios = p.buscarTodos();
-            int tama= usuarios.size();
             //JOptionPane.showMessageDialog(this,"Usuarios encontrados: " +tama);
-            
+            int tama= p.buscarTodos().size();
+            tablaUsuario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [tama][3],
+            new String [] {
+                "Nombre", "Edad", "Email"
+            }
+        )); 
             int fila=0;
-             
+     
             for (Usuario u: usuarios){
-          
                 tablaUsuario.setValueAt(u.getNombre(), fila, 0);
                 tablaUsuario.setValueAt(u.getEdad(), fila, 1);
                 tablaUsuario.setValueAt(u.getEmail(), fila, 2);
                 fila++;
+                
             }
     
              
