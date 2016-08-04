@@ -14,6 +14,10 @@ public class Empleado {
     private String nombre;
     private Departamento departamento;
 
+    public Empleado(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Empleado() {
     }
 
